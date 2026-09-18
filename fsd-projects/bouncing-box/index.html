@@ -8,7 +8,7 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: rgb(0, 19, 128);
+        background-color: rgb(115, 128, 0);
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -21,6 +21,9 @@
 
       .board {
         height: 100vh;
+      }
+      body{
+        background-image: url("backround/zelda.png")
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -76,6 +79,8 @@
         var speed = 3;
         var speedY = 3;
         var boardHeight = jQuery(window).height();
+        var randNum = Math.random() * 100;
+       
 
         /**
          * This Function will be called 20 times/second.
@@ -112,11 +117,12 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-          positionX = 0;
+          positionX = randNum;
           changeBoxText(points);
           ++points;
           speed += 3;
         }
+        var randNum = Math.random() * boardWidth;
 
 
         
